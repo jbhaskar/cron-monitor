@@ -15,7 +15,7 @@ Dotenv.load
 configure do
   SiteConfig = OpenStruct.new(
                  :title => 'Cron Monitor',
-                 :author => 'Prashanth Rajagopal',
+                 :author => '',
                  :url_base => 'http://localhost:4567/'
                )
 
