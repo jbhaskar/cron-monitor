@@ -9,4 +9,4 @@ listen "/tmp/unicorn.cron-monitor.sock"
 
 worker_processes 2
 
-timeout 30
+timeout 180

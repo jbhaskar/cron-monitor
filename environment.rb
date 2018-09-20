@@ -23,7 +23,7 @@ configure do
   $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/lib")
   Dir.glob("#{File.dirname(__FILE__)}/lib/*.rb") { |lib| require File.basename(lib, '.*') }
 
-  DataMapper.setup(:default, (ENV["DATABASE_URL"] || "mysql://root@localhost:3306/cron_monitor"))
+  DataMapper.setup(:default, (ENV["DATABASE_URL"] || "mysql://root:password@localhost:3306/cron_monitor"))
   DataMapper.finalize
   DataMapper.auto_upgrade!
 end

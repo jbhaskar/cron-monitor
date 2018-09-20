@@ -81,7 +81,9 @@ get "/" do
         cron_failure = false
       end
     end
-    @cron_hash[cron.name] = { :start_time => cr.start_time, :end_time => cr.end_time, :ping_freq => cron.ping_freq, :exec_freq => cron.exec_time, :cron_status => cron_failure }
+    if cr.present?
+      @cron_hash[cron.name] = { :start_time => cr.start_time, :end_time => cr.end_time, :ping_freq => cron.ping_freq, :exec_freq => cron.exec_time, :cron_status => cron_failure }
+    end
   end
   erb :root
 end
